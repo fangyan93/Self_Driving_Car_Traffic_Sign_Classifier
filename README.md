@@ -18,17 +18,7 @@ A traffic sign classifier is trained over Germany traffic sign dataset using con
 ### Load the data
 Before running code, please run the download_data_set.sh shell script to download the dataset first!
 
-
-**Build a Traffic Sign Recognition Project**
-
-The goals / steps of this project are the following:
-* Load the data set by running download_data_set.sh file
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
-
+### Visualize data
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 More detailed visualization and summary of dataset can be viewed in [project code](https://github.com/fangyan93/Self_Driving_Car_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier_1.ipynb).
