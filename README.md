@@ -119,33 +119,68 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| 30 speed limit      		| 30 speed limit  									| 
+| 80 speed limit  			| Wild animals crossing										|
+| Stop sign				| Stop sign											|
+| Road Work       		| Road Work  				 				|
+| No entry			| Wild animals crossing       							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. The performance of this model for this 5 images is worse than for the given dataset. 
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in [project code](https://github.com/fangyan93/Self_Driving_Car_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier_1.ipynb)
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is greatly sure that this is a sign of Speed limit (30km/h) (probability of 1.0), and the image does contain a Speed limit (30km/h) sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 1.0         			| Speed limit (30km/h)   									| 
+| >.01     				| Speed limit (20km/h) 										|
+| >.01					| Speed limit (70km/h)										|
+| >.01	      			| Speed limit (50km/h)					 				|
+| >.01				    | Speed limit (60km/h)      							|
 
 
-For the second image ... 
+
+For the second image, the model is relatively sure that this is a sign of Wild animals crossing		(probability of 0.75), and the image refers to a Speed limit (80km/h) sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.75         			| Wild animals crossing   									| 
+| 0.1     				| Slippery road										|
+| 0.075					| Speed limit (120km/h)										|
+| 0.05	      			| No passing					 				|
+| 0.05				    | General caution     							|
+
+
+For the third image, the model is greatly sure that this is a stop sign		(probability of 1.0), and the image does contains a stop sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0         			| Stop sign   									| 
+| >.01     				| Bicycles crossing									|
+| >.01					| No entry										|
+| >.01	      			| Dangerous curve to the right					 				|
+| >.01				    | End of speed limit (80km/h)      							|
+
+For the 4th image, the model is greatly sure that this is a sign of road work		(probability of 1.0), and the image does contains a road work sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0         			| Road work  									| 
+| >.01     				| No passing								|
+| >.01					| Pedestrians									|
+| >.01	      			| Speed limit (80km/h)					 				|
+| >.01				    | Wild animals crossing     							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
+The visualization of feature maps for 1st and 2nd convolutional layers are shown in detail at the end of the [jupyter notebook](https://github.com/fangyan93/Self_Driving_Car_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier_1.ipynb).
 
+For the example sign of speed limit 30km/h image, we can see from output of 1st convolutional layer that the circle on that image and the central area of the sign are highlighted, the influence of background is reduce to some extent. From the output of 2nd convolutional layer, we still can vaguely see the circular pattern of the ouput. 
+
+For the example image, which is as speed limit 30km/h  
+For the example image, which is as speed limit 30km/h 
