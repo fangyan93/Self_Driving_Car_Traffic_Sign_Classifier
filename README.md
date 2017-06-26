@@ -1,7 +1,4 @@
-Traffic Sign Recognition
-
-This is second project of Udacity Self Driving Car NanoDegree. 
-A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
+# Traffic Sign Recognition
 ---
 [//]: # (Image References)
 
@@ -14,6 +11,10 @@ A traffic sign classifier is trained over Germany traffic sign dataset using con
 [image7]: ./Images_for_Readme/curve.png "Error curve"
 [image8]: ./Images_for_Readme/example_image.jpg "Example training image"
 [image9]: ./Images_for_Readme/visualize_featuremap.png "visualize featuremap"
+### Introduction
+This is second project of Udacity Self Driving Car NanoDegree. 
+A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
+
 ### Load the data
 Before running code, please run the download_data_set.sh shell script to download the dataset first!
 
