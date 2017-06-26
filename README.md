@@ -10,7 +10,7 @@ Before running code, please run the download_data_set.sh shell script to downloa
 [image2]: ./80.png "80 speed limit"
 [image3]: ./no_entry.png "No entry"
 [image4]: ./stop.jpg "Stop sign"
-[image5]: ./road_work.jpg "Road work"
+[image5]: ./road_work.jpg 
 [image6]: ./Images_for_Readme/bar_chart.png "Bar chart for dataset visualization"
 [image7]: ./Images_for_Readme/curve.png "Error curve"
 [image8]: ./Images_for_Readme/example_image.png "Example training image"
