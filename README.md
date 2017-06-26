@@ -11,9 +11,9 @@ Before running code, please run the download_data_set.sh shell script to downloa
 [image3]: ./no_entry.png "Random Noise"
 [image4]: ./stop.jpg "Traffic Sign 1"
 [image5]: ./road_word.png "Traffic Sign 2"
-[image6]: ~/Images_for_Readme/bar_chart.png "Random Noise"
-[image7]: ~/Images_for_Readme/curve.jpg "Traffic Sign 1"
-[image8]: ~/Images_for_Readme/bar_chart.png "Traffic Sign 2"
+[image6]: ./Images_for_Readme/bar_chart.png "Random Noise"
+[image7]: ./Images_for_Readme/curve.jpg "Traffic Sign 1"
+[image8]: ./Images_for_Readme/bar_chart.png "Traffic Sign 2"
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
