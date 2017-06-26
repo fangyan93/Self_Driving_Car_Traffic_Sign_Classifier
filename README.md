@@ -12,8 +12,8 @@ Before running code, please run the download_data_set.sh shell script to downloa
 [image4]: ./stop.jpg "Traffic Sign 1"
 [image5]: ./road_word.png "Traffic Sign 2"
 [image6]: ./Images_for_Readme/bar_chart.png "Random Noise"
-[image7]: ./Images_for_Readme/curve.jpg "Traffic Sign 1"
-[image8]: ./Images_for_Readme/bar_chart.png "Traffic Sign 2"
+[image7]: ./Images_for_Readme/curve.png "Traffic Sign 1"
+[image8]: ./Images_for_Readme/example_image.png "Traffic Sign 2"
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -123,8 +123,8 @@ If a well known architecture was chosen:
 Here are five German traffic signs that I found on the web:
 
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image1] ![alt text][image2] ![alt text][image3] 
+![alt text][image4] ![alt text][image5]
 
 The first image might be difficult to classify because ...
 
