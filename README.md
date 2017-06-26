@@ -44,6 +44,7 @@ The x-axis refers to the class label, y-axis denotes the number of image in the 
 Here is an example of a traffic sign image .
 
 ![alt text][image8]
+
 In data preprocessing,
 first, I normalize the data by dividing each pixel by 255, in this way, every element of training data lies in [0, 1], aiming at scaling the raw data and smooth the learningp process, otherwise, in each iteration, the weight will add a large term and the model may oscillate as a result.
 
