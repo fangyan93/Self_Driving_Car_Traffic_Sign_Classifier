@@ -43,7 +43,7 @@ The x-axis refers to the class label, y-axis denotes the number of image in the 
 
 Here is an example of a traffic sign image .
 
-![alt text][image7]
+![alt text][image8]
 In data preprocessing,
 first, I normalize the data by dividing each pixel by 255, in this way, every element of training data lies in [0, 1], aiming at scaling the raw data and smooth the learningp process, otherwise, in each iteration, the weight will add a large term and the model may oscillate as a result.
 
@@ -71,8 +71,8 @@ My final model consisted of the following layers:
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The RMSPropOptimizer optimizer is used in this project, with batch size of 125 and learing rate 0.001, over 50 epoches. 
-
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+The changes of training error and validation error is shown as the figure below, the red curve denotes trainiing accuracy, the black curve denotes the validation accuracy.
+![alt text][image7]
 
 All the weights in convolutional layer are initialized using xavier_initializer in tensorflow, this works for preventing weight from exploding or vanishing.
 Regularization is added in loss function, in order to reduce overfitting. Without regularization, the model starts overfitting after 5-10 epoches.
