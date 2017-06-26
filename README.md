@@ -1,8 +1,7 @@
 **Traffic Sign Recognition** 
 
-This is second project of Udacity Self Driving Car NanoDegree. A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
-Before running code, please run the download_data_set.sh shell script to download the dataset first!
-
+This is second project of Udacity Self Driving Car NanoDegree. 
+A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
 ---
 [//]: # (Image References)
 
@@ -14,6 +13,11 @@ Before running code, please run the download_data_set.sh shell script to downloa
 [image6]: ./Images_for_Readme/bar_chart.png "Bar chart for dataset visualization"
 [image7]: ./Images_for_Readme/curve.png "Error curve"
 [image8]: ./Images_for_Readme/example_image.jpg "Example training image"
+[image9]: ./Images_for_Readme/visualize_featuremap.png "visualize featuremap"
+### Load the data
+Before running code, please run the download_data_set.sh shell script to download the dataset first!
+
+
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -26,14 +30,6 @@ The goals / steps of this project are the following:
 
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
-
-I used the numpy library to calculate summary statistics of the traffic signs data set:
-
-* The size of training set is 34799
-* The size of the validation set is 4410
-* The size of test set is 12630
-* The shape of a traffic sign image is [32, 32, 3]
-* The number of unique classes/labels in the data set is 43
 More detailed visualization and summary of dataset can be viewed in [project code](https://github.com/fangyan93/Self_Driving_Car_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier_1.ipynb).
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributes in terms of class label. The class label and corresponding meaning of the sign can be viewed in signnames.csv file.
@@ -69,12 +65,13 @@ My final model consisted of the following layers:
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+### Model summary
 
 The RMSPropOptimizer optimizer is used in this project, with batch size of 125 and learing rate 0.001, over 50 epoches. 
 The changes of training error and validation error is shown as the figure below, the red curve denotes trainiing accuracy, the black curve denotes the validation accuracy.
 ![alt text][image7]
 
+### Training
 All the weights in convolutional layer are initialized using xavier_initializer in tensorflow, this works for preventing weight from exploding or vanishing.
 Regularization is added in loss function, in order to reduce overfitting. Without regularization, the model starts overfitting after 5-10 epoches.
 My final model results were:
@@ -86,7 +83,7 @@ Convolutional neural network is famous for great performance on image classifica
 A model with 2 convolutional layer and 1 fully connected layer was used at the begining, it was change to current one by adding 1 convolutional layer, also, the number of filter in each convolutional layer were increased, because the previous model or a smaller number of weights did not work well enough. In order to increase the accuracy, other than tuning hyperparameters, a good and essential way is to use more weight.
 Learning rate is tuned at most in training, and it varied much for different optimizer. The RMSPropOptimizer optimizer works much better than GradientDescentOptimizer over this dataset, converging faster and at higher accuracy. Batch size is typical between 10-200, I choose 125, which is close to middle.
 
-Test a Model on New Images
+### Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
@@ -154,12 +151,24 @@ For the 4th image, the model is greatly sure that this is a sign of road work		(
 | >.01	      			| Speed limit (80km/h)					 				|
 | >.01				    | Wild animals crossing     							|
 
-We can see that for those 3 correctly classified images, the corresponding probability is 1, but for those 3 misclassified images, the largest probability are both about 0.75, which means the classifier is not quite sure on those 2 misclassified images. From my perspective, one highly probable reasion is that input image is not consistent with the dataset images of the all classes, in terms of image quality, lumination and contrast of the image, etc, the classifier is confused, and is forced to make a choice without much confidence. Anyway, it is still a little wired why both the misclassified images are recognized as the same class.
+For the 5th image, the model is greatly sure that this is a sign of road work		(probability of 1.0), and the image does contains a road work sign. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.75         			| Wild animals crossing  									| 
+| 0.1     				| Slippery road										|
+| 0.15					| Speed limit (120km/h)										|
+| 0.05	      			| No passing					 				|
+| 0.05				    | General caution     							|
+
+### Discussion:
+We can see that for those 3 correctly classified images, the corresponding probability is 1, but for those 3 misclassified images, the largest probability are both about 0.75 and the label of top 5 probabilities are nearly all the same, which means the classifier is totally confused.
+One highly probable reasion is that input image is not consistent with the dataset images of the all classes, in terms of image quality, lumination and contrast of the image, etc, i.e. these two images are not valid to some extent. The classifier has to make a choice without much confidence. That is why the probablity is not 1 but 0.75. But, anyway, it is still a little wired why both the misclassified images are recognized as the same class, and the probability for misclassified image should not as high as 0.75......
 
 ### Visualizing the Neural Network 
 The visualization of feature maps for 1st and 2nd convolutional layers are shown in detail at the end of the [jupyter notebook](https://github.com/fangyan93/Self_Driving_Car_Traffic_Sign_Classifier/blob/master/Traffic_Sign_Classifier_1.ipynb).
 
 For the example sign of speed limit 30km/h image, we can see from output of 1st convolutional layer that the circle on that image and the central area of the sign are highlighted, the influence of background is reduce to some extent. From the output of 2nd convolutional layer, we still can vaguely see the circular pattern of the ouput. 
 
-For the example image, which is as speed limit 30km/h  
-For the example image, which is as speed limit 30km/h 
+A screenshot of the visualization is shown as below
+![alt text][image9]
