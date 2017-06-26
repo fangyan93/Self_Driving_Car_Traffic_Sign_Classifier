@@ -6,14 +6,14 @@ Before running code, please run the download_data_set.sh shell script to downloa
 ---
 [//]: # (Image References)
 
-[image1]: ./30.jpg "Visualization"
-[image2]: ./80.png "Grayscaling"
-[image3]: ./no_entry.png "Random Noise"
-[image4]: ./stop.jpg "Traffic Sign 1"
-[image5]: ./road_work.jpg "Traffic Sign 2"
-[image6]: ./Images_for_Readme/bar_chart.png "Random Noise"
-[image7]: ./Images_for_Readme/curve.png "Traffic Sign 1"
-[image8]: ./Images_for_Readme/example_image.png "Traffic Sign 2"
+[image1]: ./30.jpg "30 speed limit"
+[image2]: ./80.png "80 speed limit"
+[image3]: ./no_entry.png "No entry"
+[image4]: ./stop.jpg "Stop sign"
+[image5]: ./road_work.jpg "Road work"
+[image6]: ./Images_for_Readme/bar_chart.png "Bar chart for dataset visualization"
+[image7]: ./Images_for_Readme/curve.png "Error curve"
+[image8]: ./Images_for_Readme/example_image.png "Example training image"
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -47,31 +47,20 @@ More detailed visualization and summary of dataset can be viewed in project code
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributes in terms of class label. The class label and corresponding meaning of the sign can be viewed in signnames.csv file.
 
 ![alt text][image6]
 
 ###Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
-As a first step, I decided to convert the images to grayscale because ...
+####1. Describe how you preprocessed the image data.What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 Here is an example of a traffic sign image .
 
 ![alt text][image7]
 
-As a last step, I normalized the image data because ...
+First, I normalize the data by divide each pixel by 255, in this way, every element of training data lies in [0, 1], aiming at preventing weight from exploding. 
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image8]
-
-The difference between the original data set and the augmented data set is the following ... 
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
