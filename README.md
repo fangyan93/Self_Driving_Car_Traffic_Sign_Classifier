@@ -59,7 +59,8 @@ Here is an example of a traffic sign image .
 
 ![alt text][image7]
 
-First, I normalize the data by divide each pixel by 255, in this way, every element of training data lies in [0, 1], aiming at preventing weight from exploding. 
+First, I normalize the data by divide each pixel by 255, in this way, every element of training data lies in [0, 1], aiming at scaling the raw data and smooth the learningp process, otherwise, in each iteration, the weight will add a large term and the model may oscillate as a result.
+
 
 
 
