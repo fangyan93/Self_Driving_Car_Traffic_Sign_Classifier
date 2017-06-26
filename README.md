@@ -1,10 +1,19 @@
-#**Traffic Sign Recognition** 
+**Traffic Sign Recognition** 
 
 This is second project of Udacity Self Driving Car NanoDegree. A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
 Before running code, please run the download_data_set.sh shell script to download the dataset first!
 
 ---
+[//]: # (Image References)
 
+[image1]: ./30.jpg "Visualization"
+[image2]: ./80.png "Grayscaling"
+[image3]: ./no_entry.png "Random Noise"
+[image4]: ./stop.jpg "Traffic Sign 1"
+[image5]: ./road_word.png "Traffic Sign 2"
+[image6]: ./no_entry.png "Random Noise"
+[image7]: ./stop.jpg "Traffic Sign 1"
+[image8]: ./road_word.png "Traffic Sign 2"
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -40,7 +49,7 @@ More detailed visualization and summary of dataset can be viewed in project code
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![alt text][image1]
+![alt text][image6]
 
 ###Design and Test a Model Architecture
 
@@ -48,9 +57,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 As a first step, I decided to convert the images to grayscale because ...
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image .
 
-![alt text][image2]
+![alt text][image7]
 
 As a last step, I normalized the image data because ...
 
@@ -60,7 +69,7 @@ To add more data to the the data set, I used the following techniques because ..
 
 Here is an example of an original image and an augmented image:
 
-![alt text][image3]
+![alt text][image8]
 
 The difference between the original data set and the augmented data set is the following ... 
 
@@ -113,13 +122,7 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-[//]: # (Image References)
 
-[image1]: ./30.jpg "Visualization"
-[image2]: ./80.png "Grayscaling"
-[image3]: ./no_entry.png "Random Noise"
-[image4]: ./stop.jpg "Traffic Sign 1"
-[image5]: ./road_word.png "Traffic Sign 2"
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
