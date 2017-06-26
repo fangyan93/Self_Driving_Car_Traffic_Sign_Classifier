@@ -13,7 +13,7 @@ Before running code, please run the download_data_set.sh shell script to downloa
 [image5]: ./road_work.jpg 
 [image6]: ./Images_for_Readme/bar_chart.png "Bar chart for dataset visualization"
 [image7]: ./Images_for_Readme/curve.png "Error curve"
-[image8]: ./Images_for_Readme/example_image.png "Example training image"
+[image8]: ./Images_for_Readme/example_image.jpg "Example training image"
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -85,9 +85,7 @@ Convolutional neural network is famous for great performance on image classifica
 A model with 2 convolutional layer and 1 fully connected layer was used at the begining, it was change to current one by adding 1 convolutional layer, also, the number of filter in each convolutional layer were increased, because the previous model or a smaller number of weights did not work well enough. In order to increase the accuracy, other than tuning hyperparameters, a good and essential way is to use more weight.
 Learning rate is tuned at most in training, and it varied much for different optimizer. The RMSPropOptimizer optimizer works much better than GradientDescentOptimizer over this dataset, converging faster and at higher accuracy. Batch size is typical between 10-200, I choose 125, which is close to middle.
 
-###Test a Model on New Images
-
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
