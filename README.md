@@ -1,4 +1,4 @@
-**Traffic Sign Recognition** 
+Traffic Sign Recognition
 
 This is second project of Udacity Self Driving Car NanoDegree. 
 A traffic sign classifier is trained over Germany traffic sign dataset using convolutional neural network.
